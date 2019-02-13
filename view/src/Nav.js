@@ -10,7 +10,7 @@ class Nav extends Component {
         return ( 
             <nav className="nav nav-tabs">
                 <NavLink exact to="/" className="nav-link">Last log</NavLink>
-                <NavLink to="/add-file" className="nav-link">Add file</NavLink>
+                <NavLink to="/files" className="nav-link">Files</NavLink>
                 <NavLink to="/add-text" className="nav-link">Add text</NavLink>
             </nav>
          );

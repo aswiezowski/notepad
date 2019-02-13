@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import FileList from './FileList.jsx';
 
 class AddFile extends Component {
     constructor(props) {
@@ -34,7 +33,6 @@ class AddFile extends Component {
     render() {
         return (
             <div>
-                
                 <h5 className="text-center">Send files</h5>
                 <form>
                     <div className="form-group">
@@ -44,7 +42,6 @@ class AddFile extends Component {
                         <button className="btn btn-primary" onClick={this.handleUpload}>Send</button>
                     </div>
                 </form>
-                <FileList></FileList>
             </div>
         );
     }
