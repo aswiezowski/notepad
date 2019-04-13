@@ -4,7 +4,6 @@ import Nav from './Nav.js'
 import AddText from './AddText.js'
 import Files from './Files.jsx'
 import LastLog from './LastLog.js'
-import 'bootstrap/dist/css/bootstrap.min.css'
 import { Route } from "react-router-dom";
 
 class App extends Component {

@@ -15,19 +15,24 @@ class LastLog extends Component {
 
     appendLastLog = (event) => {
         event.preventDefault();
-        axios.post('api/lastlog', { date:new Date(), content: this.state.newLog });
-        this.reloadLastLog();
-        this.setState({ newLog: "" })
+        axios.post('api/lastlog', { date:new Date(), content: this.state.newLog }).then(()=> {
+            this.reloadLastLog();
+            this.setState({ newLog: "" })
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
     }
 
     reloadLastLog = () => {
-        axios.get('api/lastlog').then((response) => {
+        axios.get('api/lastlog')
+        .then((response) => {
             this.setState({ text: response.data.content });
             this.lastLogTextArea.current.scrollTop = this.lastLogTextArea.current.scrollHeight;
         })
-            .catch(function (error) {
+        .catch(function (error) {
                console.log(error);
-            })
+        });
     }
 
     handleNewLogChange = (event) => {

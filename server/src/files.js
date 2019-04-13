@@ -24,7 +24,7 @@ const orderConst = { "ASC": "asc", "DESC": "desc" };
 
 router.get('/', function (req, res) {
         sortFunc = sortFunctions[req.query.sort] || sortFunctions.mtime;
-        order = orderConst[req.query.order.toUpperCase()] || orderConst.DESC;
+        order = orderConst[req.query.order] || orderConst.DESC;
         getAllFiles(sortFunc, order, files => {
             res.status(200).json(files);
         })

@@ -2,6 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser');
 var lastlogModule = require('./lastlog');
 var filesModule = require('./files');
+var textsModule = require('./texts');
 
 var API_PREFIX = '/api';
 
@@ -15,3 +16,4 @@ app.listen(port, () => console.log(`Listening on port ${port}`));
 
 app.use(API_PREFIX + '/lastlog', lastlogModule);
 app.use(API_PREFIX + '/files', filesModule);
+app.use(API_PREFIX + '/texts', textsModule);
