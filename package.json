@@ -2,10 +2,12 @@
   "name": "notepad-view",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-  },
+  "homepage": "https://github.com/swiezy/notepad",
+  "dependencies": {},
   "scripts": {
-    "start": "cd server && node src/server.js",
-    "build-react": "cd client && npm run-script build"
+    "install:server": "cd server && npm install",
+    "install:view": "cd view && npm install",
+    "build-view": "cd view && npm run-script build",
+    "start": "cd server && node src/server.js"
   }
 }

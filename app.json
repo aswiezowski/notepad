@@ -1,7 +1,7 @@
 {
     "scripts": {
       "dokku": {
-        "predeploy": "cd view && npm build"
+        "predeploy": "npm run-script install:server && npm run-script install:view && npm run-script build-view"
       }
     }
   }
