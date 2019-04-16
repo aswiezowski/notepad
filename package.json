@@ -1,0 +1,11 @@
+{
+  "name": "notepad-view",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+  },
+  "scripts": {
+    "start": "cd server && node src/server.js",
+    "build-react": "cd client && npm run-script build"
+  }
+}

@@ -9,6 +9,7 @@ var API_PREFIX = '/api';
 const app = express();
 app.use(bodyParser.json());
 app.use(API_PREFIX + '/file', express.static('upload/'));
+app.use('/', express.static('../view/build/'));
 
 const port = process.env.SERVER_PORT || 5000;
 
